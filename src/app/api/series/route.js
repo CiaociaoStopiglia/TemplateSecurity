@@ -13,7 +13,7 @@ export async function GET(req) {
     } catch (error) {
         const status = error.response?.status || 500;
         const data = error.response?.data || { error: 'Erro ao buscar as séries.'};
-        
+
         return NextResponse.json(data, { status });
     }
 }
