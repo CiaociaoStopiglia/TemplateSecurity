@@ -47,6 +47,15 @@ export const examples = [
 export const crud = [
     {
         id: 1,
+        method: 'Create',
+        verb: 'Post',
+        description: 'Cria as séries via modal e API Route',
+        color: 'purple',
+        Icon: List,
+    },
+
+    {
+        id: 1,
         method: 'Read',
         verb: 'Get',
         description: 'Lista todas as séries.',
