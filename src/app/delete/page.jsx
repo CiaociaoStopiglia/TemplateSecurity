@@ -1,7 +1,7 @@
 import { Button } from 'antd';
 import Link from 'next/link';
 
-export default function UpdatePlaceHolder() {
+export default function DeletePlaceHolder() {
     return (
         <main>
             <h2>Página que depende da seleção da série pelo usuário</h2>

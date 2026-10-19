@@ -1,27 +1,27 @@
-'use client'
-
+import SeriesList from '@/components/SeriesListLinkSSR';
 import { Skeleton } from 'antd';
-import axios from 'axios';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { toast } from 'react-hot-toast';
+import { Suspense } from 'react';
 
 export default function ReadPage() {
-    const [series, setSeries] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        async function buscarSeries() {
-            try {
-                const resp = await axios.get()
-            } catch (error) {
-
-            } finally {
-
-            }
-        }
-    })
-  return (
-    <div>page</div>
-  )
+    return (
+        <main>
+            <h2>Get - Read</h2>
+            <p>
+                O servidor chama a API com api-key privada; o Skeleton aparece até que as séries
+                cheguem usando a tag nativa do React (Suspense).
+            </p>
+            <p>
+                Abra o DevTools - Network: a chamada à API não aparece. Clique numa série para
+                buscá-la pelo id.
+            </p>
+            <Suspense
+                fallback={
+                    <div className='skeleton'>
+                        <Skeleton active />
+                    </div>
+                }>
+                <SeriesList />
+            </Suspense>
+        </main>
+    );
 }

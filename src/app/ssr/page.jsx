@@ -2,7 +2,7 @@ import SeriesList from '@components/SeriesList';
 import axios from 'axios';
 
 export default async function GetPage() {
-    let series;
+    let series = [];
 
     try {
         const resp = await axios.get(`${process.env.API_URL_SERIES}?limit=50`, {

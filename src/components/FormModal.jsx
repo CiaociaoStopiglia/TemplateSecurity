@@ -21,7 +21,7 @@ export default function FormModal({ openModal, serie, confirmLoading, onSubmit, 
                     label='Título'
                     rules={[
                         {
-                            require: true,
+                            required: true,
                             min: 3,
                             max: 120,
                             message: 'O título obrigatório deve ter entre 3 e 120 caracteres.',
@@ -35,7 +35,7 @@ export default function FormModal({ openModal, serie, confirmLoading, onSubmit, 
                     label='Gênero'
                     rules={[
                         {
-                            require: true,
+                            required: true,
                             message: 'O gênero é obrigatório.',
                         }
                     ]}>
@@ -47,7 +47,7 @@ export default function FormModal({ openModal, serie, confirmLoading, onSubmit, 
                     label='PLataforma'
                     rules={[
                         {
-                            require: true,
+                            required: true,
                             message: 'A plataforma é obrigatória.',
                         }
                     ]}>
@@ -59,12 +59,12 @@ export default function FormModal({ openModal, serie, confirmLoading, onSubmit, 
                     label='Temporadas'
                     rules={[
                         {
-                            require: true,
+                            required: true,
                             type: 'number',
                             message: 'O número de temporadas é obrigatório.',
                         }
                     ]}>
-                    <Input placeholder='ex: 5' min={1} style={{ width: '100%' }} />
+                    <InputNumber placeholder='ex: 5' min={1} style={{ width: '100%' }} />
                 </Form.Item>
 
                 <Form.Item
@@ -72,12 +72,12 @@ export default function FormModal({ openModal, serie, confirmLoading, onSubmit, 
                     label='Ano de lançamento'
                     rules={[
                         {
-                            require: true,
+                            required: true,
                             type: 'number',
                             message: 'O Ano de lançamento é obrigatório.',
                         }
                     ]}>
-                    <Input placeholder='ex: 2008' min={1000} style={{ width: '100%' }} />
+                    <InputNumber placeholder='ex: 2008' min={1000} style={{ width: '100%' }} />
                 </Form.Item>
 
                 <Form.Item
