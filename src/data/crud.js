@@ -55,7 +55,7 @@ export const crud = [
     },
 
     {
-        id: 1,
+        id: 2,
         method: 'Read',
         verb: 'Get',
         description: 'Lista todas as séries.',
